@@ -1,0 +1,17 @@
+[project]
+name = "vit-sat"
+version = "1.0.0"
+description = "Classification d'images satellite (EuroSAT) avec un Vision Transformer, et explicabilité par attention rollout"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E402"]  # matplotlib.use("Agg") doit être appelé avant d'importer pyplot
